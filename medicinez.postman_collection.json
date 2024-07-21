@@ -1,0 +1,1651 @@
+{
+	"info": {
+		"_postman_id": "4405c7b0-792a-48c2-9170-a1d2b64d2a61",
+		"name": "medicinez",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30689774"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "0900000978",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTYzMDM5MzQsImV4cCI6MTcxNjkwODczNCwibmJmIjoxNzE2MzAzOTM0LCJqdGkiOiJvMWRCVlcyUU1wQXA3YjRpIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.p1iIBAKQBsDAFPoOv9NNKXKJUfnyXHDpb0GPj8MGlIk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/auth/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "warehouse",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/warehouse/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"warehouse",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexByState",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/warehouse/indexByState/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"warehouse",
+								"indexByState",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "warehouse_name",
+									"value": "my warehouse 3",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0900000003",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "bla bla bla bla bla",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "damascus damascus damascus damascus damascus",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/D:/WALLPAPERS/Screenshot 2023-09-15 172442.jpg"
+								},
+								{
+									"key": "states[]",
+									"value": "1",
+									"description": "damascus",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "2",
+									"description": "Rif Dimashq",
+									"type": "text"
+								},
+								{
+									"key": "states[]",
+									"value": "3",
+									"description": "Aleppo",
+									"type": "text"
+								},
+								{
+									"key": "states[]",
+									"value": "4",
+									"description": "Homs",
+									"type": "text"
+								},
+								{
+									"key": "states[]",
+									"value": "5",
+									"description": "Latakia",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "6",
+									"description": "Hama",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "7",
+									"description": "Tartus",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "8",
+									"description": "Daraa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "9",
+									"description": "Al Suwayda",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/warehouse/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"warehouse",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/warehouse/show/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"warehouse",
+								"show",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY0ODI1MDgsImV4cCI6MTcxNzA4NzMwOCwibmJmIjoxNzE2NDgyNTA4LCJqdGkiOiJwNUlBZThaVWZ4Q1B4dFF1Iiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.s-Q6ZZDGiSz0WiztXRFGgzf85fh5dOS0zrl9Gx2B4yI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone",
+									"value": "0900000001",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "warehouse_name",
+									"value": "my warehouse 1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "damascus: baramka presidint bridge",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "1",
+									"description": "damascus",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "2",
+									"description": "Rif Dimashq",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "3",
+									"description": "Aleppo",
+									"type": "text"
+								},
+								{
+									"key": "states[]",
+									"value": "4",
+									"description": "Homs",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "5",
+									"description": "Latakia",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "6",
+									"description": "Hama",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "7",
+									"description": "Tartus",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "8",
+									"description": "Daraa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "states[]",
+									"value": "9",
+									"description": "Al Suwayda",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/warehouse/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"warehouse",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTYzMDIzMjMsImV4cCI6MTcxNjkwNzEyMywibmJmIjoxNzE2MzAyMzIzLCJqdGkiOiJ3SFhiWm9SN0RvaXBCa3l0Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.75UeTmQ6wLCZO3cieCHbOslT4KwZcv72Z9xZmsGuCjo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/warehouse/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"warehouse",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY1NDg5MzAsImV4cCI6MTcxNzE1MzczMCwibmJmIjoxNzE2NTQ4OTMwLCJqdGkiOiJxSDNWdllSWk51MkJCam8wIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.mHoSu7eFUdbWNKcggpOjszSR9g_lGm7U2ceRL7OM8ag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/employee/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"employee",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTYzMzIwMTUsImV4cCI6MTcxNjkzNjgxNSwibmJmIjoxNzE2MzMyMDE1LCJqdGkiOiJwOVZJZHV6eU5KMElKU043Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.Zxdo4xYpmnJyWdkD_4cae9uXvqoVR8fr9plWxtPPGFE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employee_name",
+									"value": "employee 12",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0900000012",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "roles[]",
+									"value": "1",
+									"description": "warehouse_supervisor",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "roles[]",
+									"value": "2",
+									"description": "orders_supervisor",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/employee/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"employee",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTYzMDM5MzQsImV4cCI6MTcxNjkwODczNCwibmJmIjoxNzE2MzAzOTM0LCJqdGkiOiJvMWRCVlcyUU1wQXA3YjRpIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.p1iIBAKQBsDAFPoOv9NNKXKJUfnyXHDpb0GPj8MGlIk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/employee/show/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"employee",
+								"show",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTYyMTYzOTUsImV4cCI6MTcxNjgyMTE5NSwibmJmIjoxNzE2MjE2Mzk1LCJqdGkiOiJhWDlGdG4wYUpvVHRPNmU1Iiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.O_C8fsHaYNKiMJ_5N0gUH24s1poC1a_okgGFtiJlYn4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone",
+									"value": "0900020000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "employee_name",
+									"value": "employee",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "salary",
+									"value": "3002.2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "roles[]",
+									"value": "1",
+									"description": "warehouse_supervisor",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "roles[]",
+									"value": "2",
+									"description": "orders_supervisor",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/employee/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"employee",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTYyMTYzOTUsImV4cCI6MTcxNjgyMTE5NSwibmJmIjoxNzE2MjE2Mzk1LCJqdGkiOiJhWDlGdG4wYUpvVHRPNmU1Iiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.O_C8fsHaYNKiMJ_5N0gUH24s1poC1a_okgGFtiJlYn4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/employee/delete/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"employee",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "medicine",
+			"item": [
+				{
+					"name": "status medicine",
+					"item": [
+						{
+							"name": "store",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTYzODQyMTcsImV4cCI6MTcxNjk4OTAxNywibmJmIjoxNzE2Mzg0MjE3LCJqdGkiOiJ4Y1ZDbVJRbnJZMGxtUWlyIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJlbXBsb3llZSIsInJvbGVzIjpbIndhcmVob3VzZV9zdXBlcnZpc29yIl19.q_F2diYJomHoXWVsIpzXLcASGG1cb3-vmbuy42ngn68",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "medicine_id",
+											"value": "15",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "expiration_date",
+											"value": "2025-01-01",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/medicine/status-medicine/store",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"medicine",
+										"status-medicine",
+										"store"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexForWarehouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY1NzY0ODcsImV4cCI6MTcxNzE4MTI4NywibmJmIjoxNzE2NTc2NDg3LCJqdGkiOiJYdEE5UXhxdUluUWdwVElFIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJlbXBsb3llZSIsInJvbGVzIjpbIndhcmVob3VzZV9zdXBlcnZpc29yIl19.1OYjiM0oug9aYgA5NGsnhjYTpat1t1YRAQObDtYpRsM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/indexForWarehouse",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"indexForWarehouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexByWarehouse",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/indexByWarehouse/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"indexByWarehouse",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexByCategory",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/indexByCategory/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"indexByCategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexByFavorit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY1MDY1OTUsImV4cCI6MTcxNzExMTM5NSwibmJmIjoxNzE2NTA2NTk1LCJqdGkiOiJRWXBTTWNDV2ZjZEN2MmFFIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXNlcl90eXBlIjoicGhhcm1hY2lzdCIsInJvbGVzIjpbXX0.FbYmem7_4gLRcTglv-Xsn1yl-k2msDAyNWzTf8wBqVw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/indexByFavorit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"indexByFavorit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTU0NDAzNjUsImV4cCI6MTcxNjA0NTE2NSwibmJmIjoxNzE1NDQwMzY1LCJqdGkiOiJUSzl0cEx5ak12UGlEUWFPIiwic3ViIjoiOSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJlbXBsb3llZSIsInJvbGVzIjpbIm1hbmFnZXIiXX0.hJva3yF__BLXEbfimKEa1vDjCXdOn0lQSyNscL7QT10",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/show/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"show",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showForWarehouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY0NjYxNzUsImV4cCI6MTcxNzA3MDk3NSwibmJmIjoxNzE2NDY2MTc1LCJqdGkiOiJ5amtUUWlGcWZnelVzZUViIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.2izciCNLNOWsM4AivTuXjMyRv_-gXwVia5Ylo8Wj1wc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/showForWarehouse/15",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"showForWarehouse",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY1NzY0ODcsImV4cCI6MTcxNzE4MTI4NywibmJmIjoxNzE2NTc2NDg3LCJqdGkiOiJYdEE5UXhxdUluUWdwVElFIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJlbXBsb3llZSIsInJvbGVzIjpbIndhcmVob3VzZV9zdXBlcnZpc29yIl19.1OYjiM0oug9aYgA5NGsnhjYTpat1t1YRAQObDtYpRsM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "commercial_name",
+									"value": "medicine 23ff",
+									"type": "text"
+								},
+								{
+									"key": "scientific_name",
+									"value": "scientific 2",
+									"type": "text"
+								},
+								{
+									"key": "factory_name",
+									"value": "factory 2",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "7000",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/D:/WALLPAPERS/Screenshot 2023-09-15 172442.jpg"
+								},
+								{
+									"key": "categories[]",
+									"value": "category 1",
+									"description": "user can create categories",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "category 2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "categories[]",
+									"value": "category 3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quantity",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "expiration_date",
+									"value": "2025-06-01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/medicine/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTYzMjU2MDEsImV4cCI6MTcxNjkzMDQwMSwibmJmIjoxNzE2MzI1NjAxLCJqdGkiOiJtZnEyTHp0WldoOVgxb0VvIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJlbXBsb3llZSIsInJvbGVzIjpbIndhcmVob3VzZV9zdXBlcnZpc29yIl19.hgpHZh3RoJFtgRPaEVmBsza3JOQSWbpizZ-CLjya9ko",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "commercial_name",
+									"value": "medicine 1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "scientific_name",
+									"value": "scientific 1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "factory_name",
+									"value": "factory 1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "9000",
+									"description": "manager",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "categories[]",
+									"value": "category 1",
+									"description": "warehouse_supervisor",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "categories[]",
+									"value": "category 2",
+									"description": "orders_supervisor",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "categories[]",
+									"value": "category 3333",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quantity",
+									"value": "30",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "expiration_date",
+									"value": "2025-06-01",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/medicine/update/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"update",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY0NjYxNzUsImV4cCI6MTcxNzA3MDk3NSwibmJmIjoxNzE2NDY2MTc1LCJqdGkiOiJ5amtUUWlGcWZnelVzZUViIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.2izciCNLNOWsM4AivTuXjMyRv_-gXwVia5Ylo8Wj1wc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/delete/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"delete",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/search/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"search",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addToFavoritit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY1MDY1OTUsImV4cCI6MTcxNzExMTM5NSwibmJmIjoxNzE2NTA2NTk1LCJqdGkiOiJRWXBTTWNDV2ZjZEN2MmFFIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXNlcl90eXBlIjoicGhhcm1hY2lzdCIsInJvbGVzIjpbXX0.FbYmem7_4gLRcTglv-Xsn1yl-k2msDAyNWzTf8wBqVw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/medicine/addToFavorit/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"medicine",
+								"addToFavorit",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category/index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"index"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pharmacist",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "0900000111",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "pharmacist 1",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "kjbjfjkasng gasnjfng afas",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pharmacist/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pharmacist",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3BoYXJtYWNpc3Qvc3RvcmUiLCJpYXQiOjE3MTY0OTY5NjYsImV4cCI6MTcxNzEwMTc2NiwibmJmIjoxNzE2NDk2OTY2LCJqdGkiOiJxREcyRm81eE1sd3A0bGRhIiwic3ViIjoiOSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJwaGFybWFjaXN0Iiwicm9sZXMiOltdfQ.wUJeq-mLY6Su208x6zDbSZOZXq8AObhV1ROoqQm8L24",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone",
+									"value": "0900000200",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "pharmacist 2",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "kjbjfjkasng gasnjfng afas",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pharmacist/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pharmacist",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY1MDUzMzgsImV4cCI6MTcxNzExMDEzOCwibmJmIjoxNzE2NTA1MzM4LCJqdGkiOiJob1E2UXFZcUlHdndwbzZaIiwic3ViIjoiMTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXNlcl90eXBlIjoicGhhcm1hY2lzdCIsInJvbGVzIjpbXX0.fDmd1MBwsqyhR9p4bB-taxIIaLi594tlhc1U51OcbHs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/pharmacist/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pharmacist",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "indexForPharmacist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY1ODM3MDYsImV4cCI6MTcxNzE4ODUwNiwibmJmIjoxNzE2NTgzNzA2LCJqdGkiOiJuSVo0UlBEV09KbFMzZkcwIiwic3ViIjoiOSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJwaGFybWFjaXN0Iiwicm9sZXMiOltdfQ.61zqkzOtdynqEOiYHYL_FdC3n74mwU6GSOe_yNLWj_w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/indexForPharmacist",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"indexForPharmacist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexArchivedForPharmacist",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "indexForWarehouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY1ODU3MjAsImV4cCI6MTcxNzE5MDUyMCwibmJmIjoxNzE2NTg1NzIwLCJqdGkiOiJJMmd5aGhQNlVQRHo2MEZNIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX3R5cGUiOiJ3YXJlaG91c2UiLCJyb2xlcyI6W119.ikCzD4ZEM3RnTjR46n7HrqFro7pJPQVXi0wk7PZ2jOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/indexForWarehouse",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"indexForWarehouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexArchivedForWarehouse",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTY1ODM5NTQsImV4cCI6MTcxNzE4ODc1NCwibmJmIjoxNzE2NTgzOTU0LCJqdGkiOiJLWURmYmVkY0NCSFJzajR0Iiwic3ViIjoiMTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwidXNlcl90eXBlIjoicGhhcm1hY2lzdCIsInJvbGVzIjpbXX0.aW9pueXOJjbWO05DDWWfQtVw1jiff8Rwy7UNmhrycEE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "medicine[]",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "medicine[]",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "medicine[]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "quantity[1]",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quantity[2]",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quantity[4]",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/order/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showForPharmacist",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "showForWarehouse",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "acceptOrder",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
